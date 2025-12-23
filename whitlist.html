@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godlx SMP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f08335, #08a308);
+            color: #FFF;
+            overflow-x: hidden;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav a {
+            color: #FFD700;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #FF4500;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-image: url('IMG_20251124_080927.jpg');
+            background-size: cover;
+            animation: float 5s ease-in-out infinite;
+        }
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        form {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background: #FF4500;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+<link rel="icon" type="image/x-icon" href="icon.jpg">
+</head>
+
+<body>
+<header>
+    <h1>Godlx SMP</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Join</a></li>
+            <li><a href="#whitelist">Whitelist</a></li>
+            <li><a href="index.html">Store</a></li>
+            <li><a href="index.html">Leaderboard</a></li>
+            <li><a href="#support">Support</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="hero">
+    <i class="fas fa-bomb creeper"></i>
+    <i class="fas fa-bomb creeper"></i>
+</div>
+
+<section id="whitelist">
+    <h2 class="section-title">Whitelist Application</h2>
+    <center><h3>Apply to join our exclusive community!</h3></center>
+
+    <form id="whitelistForm">
+
+        <input type="text" name="username" placeholder="Minecraft Username" required>
+        <input type="email" name="email" placeholder="Email (optional)">
+        <input type="text" name="discordusername" placeholder="Discord Username" required>
+        <input type="text" name="minecraftversion" placeholder="Minecraft Version (Java/Bedrock)" required>
+        <input type="text" name="Playstyle" placeholder="Your Playstyle (Builder/PVP/Grinder etc)" required>
+        <input type="text" name="device" placeholder="PC or Mobile" required>
+        <input type="text" name="ytchannellink" placeholder="YouTube Channel Link (Optional)">
+        <input type="text" name="game He Play" placeholder="Which Mod You Playing? smp/lifesteal/anarchy/oneblock/all" required>
+
+        <button type="submit">Apply For Whitelist</button>
+
+    </form>
+</section>
+
+<section id="support">
+    <p>Need help? Contact us via Discord or submit a ticket.</p>
+    <a href="https://discord.gg/HtHpEZJsQV" class="btn">Create Ticket</a>
+    <p>Join our Discord: <a href="https://discord.gg/YGH7JWkq62" style="color: #1f2df1;">https://discord.gg/YGH7JWkq62</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Godlx SMP ❤️ for Minecraft lovers.</p>
+</footer>
+
+
+<!-- WHITELIST WEBHOOK SCRIPT -->
+<script>
+document.getElementById("whitelistForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const webhookURL = "https://discord.com/api/webhooks/1446832842351972495/EkFse3q3t6lURaFyskZhaxegkMQVYDSH3jCfj4qhrxJ-Hfb225hppQvKQwoHL2GrUMcs";
+
+    const form = new FormData(this);
+
+    const message = {
+        content: null,
+        embeds: [{
+            title: "📌 New Whitelist Application",
+            color: 0x00ff0a,
+            fields: [
+                { name: "Minecraft Username", value: form.get("username") },
+                { name: "Email", value: form.get("email") || "Not provided" },
+                { name: "Discord Username", value: form.get("discordusername") },
+                { name: "Minecraft Version", value: form.get("minecraftversion") },
+                { name: "Playstyle", value: form.get("Playstyle") },
+                { name: "Device", value: form.get("device") },
+                { name: "YouTube Channel", value: form.get("ytchannellink") || "Not Provided" },
+                { name: "Game Selected", value: form.get("game He Play") }
+            ],
+            footer: { text: "Godlx SMP Whitelist System" }
+        }]
+    };
+
+    fetch(webhookURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(message)
+    })
+    .then(() => {
+        alert("✔ Whitelist submitted successfully!");
+        document.getElementById("whitelistForm").reset();
+    })
+    .catch(() => alert("❌ Error sending to Discord."));
+});
+</script>
+
+</body>
+</html>
+
+
+
+

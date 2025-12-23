@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godlx SMP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f08335, #08a308); /* Dirt to grass gradient */
+            color: #FFF;
+            overflow-x: hidden;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav a {
+            color: #FFD700;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #FF4500;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-image: url('IMG_20251124_080927.jpg'); /* Placeholder for Minecraft grass texture; replace with your own */
+            background-size: cover;
+            animation: float 5s ease-in-out infinite;
+        }
+        .hero h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #000;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .btn {
+            background: #FFD700;
+            color: #000;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #FFD700;
+        }
+        form {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background: #FF4500;
+            color: #FFF;
+            cursor: pointer;
+        }
+        .leaderboard {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .leaderboard-item {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 20px;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 5px #FFD700; }
+            to { box-shadow: 0 0 20px #FFD700; }
+        }
+        .creeper {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            font-size: 3em;
+            animation: float 4s ease-in-out infinite;
+            opacity: 0.5;
+        }
+        .creeper:nth-child(2) {
+            left: 80%;
+            animation-delay: 2s;
+        }
+    </style>
+<link rel="icon" type="image/x-icon" href="icon.jpg">
+</head>
+<body>
+    <header>
+        <h1>Godlx SMP</h1>
+        <nav>
+            <ul>
+                <li><a href="#join">Join</a></li>
+                <li><a href="#whitelist">Whitelist</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="#leaderboard">Leaderboard</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to Godlx SMP!</h1></div>
+
+    <section id="join">
+        <p>Explore SMP, Anarchy, Lifesteal, OneBlock, and KitPvP worlds. Build, fight, and survive!</p>
+        <a href="#join" class="btn">Get Started</a>
+        <i class="fas fa-bomb creeper"></i>
+        <i class="fas fa-bomb creeper"></i>
+        <h2 class="section-title">Join Godlx SMP</h2>
+        <p>IP: in Discord (Replace with your actual IP)</p>
+        <p>Download Minecraft Java Edition or Pocket Edition and connect!.</p>
+        <a href="https://www.minecraft.net/en-us/about-minecraft" class="btn" target="_blank">Download Minecraft Official</a>
+        <p>Cracked Launchers!.</p>
+        <a href="https://skmedix.pl/" class="btn" target="_blank">Download SKLauncher</a>
+        <a href="https://tlauncher.org/" class="btn" target="_blank">Download TLauncher</a>
+
+    </section>
+
+    <section id="whitelist">
+        <h2 class="section-title">Whitelist Application</h2>
+        <p>Apply to join our exclusive community!</p>
+        <center><a class="btn" href="whitlist.html" target="_blank">Get Whitelist!</a></center>
+       
+    </section>
+
+    <section id="store">
+        <h2 class="section-title">In-Game Store</h2>
+        <p>Buy ranks, cosmetics, and boosts with real money or in-game currency!</p>
+        <ul>
+            <li>VIP Kit: 29INR</li>
+            <br>
+            <li>MVP Kit : 49INR</li>
+            <br>
+            <li>PRO Kit: 79INR</li>
+            <br>
+            <li>DYNAMIC Kit: 99INR</li>
+            <br>
+            <li>IMMORTAL Kit: 159INR</li>
+            <br>
+            <li>LEGENDARY Kit: 299INR</li>
+            <br>
+            <li>GOD Kit: 329INR</li>
+            <h2>Other Kits And Custom Ranks Comming Soon!</h2>
+        </ul>
+        <a href="payment form.html" class="btn">Shop Now</a> <!-- Link to your store (e.g., Tebex or Buycraft) -->
+    </section>
+
+    <section id="leaderboard">
+        <h2 class="section-title">Leaderboard</h2>
+        <div class="leaderboard">
+            <div class="leaderboard-item">
+                <h3>SMP Top Player</h3>
+                <p>1.Zrockeyzore</p>
+                <p>2.NIRANJANZONEGAME</p>
+            </div>
+            <div class="leaderboard-item">
+                <h3>Anarchy Champion</h3>
+                <p>1.Zrockeyzore - 39 Kills</p>
+                <p>2.NIRANJANZONEGAME - 17 Kills</p>
+            </div>
+            <div class="leaderboard-item">
+                <h3>Lifesteal King</h3>
+                <p>Zrockeyzore - 100000000002387 Money</p>
+                <p>NIRANJANZONEGAME - 1000902373200 Money</p>
+            </div>
+            <div class="leaderboard-item">
+                <h3>OneBlock Master</h3>
+                <p>Zrockeyzore - Level 7</p>
+                <p>NIRANJANZONEGAME - Level 3</p>
+                <p>Iamaplayer - Level 2</p>
+                <p>abhinav_gamers - Level 1</p>
+            </div>
+            <div class="leaderboard-item">
+                <h3>KitPvP Legend</h3>
+                <p>Zrockeyzore - 19 Wins</p>
+                <p>NIRANJANZONEGAME - 8 Wins</p>
+            </div>
+    </div></section>
+
+    <section id="support">
+        <h2 class="section-title">Support</h2>
+        <p>Need help? Contact us via Discord or submit a ticket.</p>
+        <a href="https://discord.gg/c3HJhwaKt9" class="btn">Create Ticket</a>
+        
+        
+        <p>Join our Discord: <a href="https://discord.gg/YGH7JWkq62" style="color: #1f2df1;">https://discord.gg/YGH7JWkq62</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Godlx SMP.<i class="fas fa-heart"></i> for Minecraft lovers.</p>
+    </footer>
+
+    <script>
+        // Simple JS for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+<script async="" id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="ea4d85de-3ef9-432b-964a-79b656782ded" data-netlify-deploy-branch="" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZWE0ZDg1ZGUtM2VmOS00MzJiLTk2NGEtNzliNjU2NzgyZGVkIiwiYWNjb3VudF9pZCI6IjY5MmYwZDIxYmE4YTYyMTRkZDg4YTUzYyIsImRlcGxveV9pZCI6IjY5MzA0M2UzMzM5ZjUxZjIzMDQ2OTYyNiIsImlzc3VlciI6Im5mc2VydmVyIn0.K9iYrytvZZ_p_G6GV6oB9Gy69m7NBRyYHE4YdAnJ27Y"></script>
+</body></html>
